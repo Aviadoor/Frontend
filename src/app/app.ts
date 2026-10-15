@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { AuthService } from './core/services/auth.service';
 @Component({
 selector: 'app-root',
 standalone: true,
-imports: [RouterOutlet, RouterLink],
+imports: [RouterOutlet],
 templateUrl: './app.html'
 })
 export class AppComponent {

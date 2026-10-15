@@ -7,7 +7,7 @@ import { ProductoForm } from '../product-form/product-form';
 selector: 'app-productos',
 standalone: true,
 imports: [CommonModule,ProductoForm],
-templateUrl: './productos.html'
+templateUrl: './productos.html'  
 })
 export class ProductosComponent implements OnInit {
 private productoService = inject(ProductoService);
