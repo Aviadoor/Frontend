@@ -1,0 +1,21 @@
+<h3>{{ producto().id ? 'Editar Producto' : 'Agregar Nuevo Producto' }}</h3>
+<form (ngSubmit)="guardar()">
+<label>Nombre</label>
+<!-- Accedemos al objeto interno de la signal usando producto().nombre -->
+<input type="text" name="nombre" [(ngModel)]="producto().nombre" required>
+<label>Categoría</label>
+<input type="text" name="categoria" [(ngModel)]="producto().categoria" required>
+<label>Precio</label>
+<input type="number" name="precio" [(ngModel)]="producto().precio" min="0.01" required>
+<label>Stock</label>
+<input type="number" name="stock" [(ngModel)]="producto().stock" min="0" required>
+
+<button type="submit">
+<!-- El botón cambiará de nombre según el caso -->
+{{ producto().id ? 'Guardar Cambios' : 'Registrar Producto' }}
+</button>
+<!-- Botón opcional para cancelar la edición actual -->
+@if (producto().id) {
+<button type="button" (click)="limpiarFormulario()">Cancelar</button>
+}
+</form>
