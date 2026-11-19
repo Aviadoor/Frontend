@@ -42,7 +42,7 @@ jobs:
       - name: Subir artefacto estatico
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist/NOMBRE_ANGULAR/browser
+          path: dist/proyecto-fe/browser
 
       - name: Publicar en GitHub Pages
         id: deployment
